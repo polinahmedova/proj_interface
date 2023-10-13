@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                 Text("Вход"),
                 SizedBox(
                   //для того, чтобы между иконкой человечка "вход" и значком уведомления было расстояние
-                  width: 24,
+                  width: 26,
                 ),
                 Icon(Icons.notifications)
               ],
