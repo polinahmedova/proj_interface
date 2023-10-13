@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(AuthenticationApp());
+void main() => runApp(
+    AuthenticationApp()); //создается экземпляр класса AuthenticationApp и запускается приложение
 
 class AuthenticationApp extends StatelessWidget {
   @override
@@ -17,9 +18,9 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: Color.fromARGB(190, 255, 134, 1),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 12, 19, 84),
+        backgroundColor: Color.fromARGB(255, 116, 81, 185),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -29,6 +30,7 @@ class LoginPage extends StatelessWidget {
                 Icon(Icons.person),
                 Text("Вход"),
                 SizedBox(
+                  //для того, чтобы между иконкой человечка "вход" и значком уведомления было расстояние
                   width: 24,
                 ),
                 Icon(Icons.notifications)
@@ -106,7 +108,8 @@ class LoginPage extends StatelessWidget {
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50)),
+                                  borderRadius: BorderRadius.circular(
+                                      50)), //закругление кнопки
                               backgroundColor: Colors.white),
                         ),
                       ),
@@ -122,7 +125,10 @@ class LoginPage extends StatelessWidget {
                           ),
                           Text(
                             "Оставить заявку",
-                            style: TextStyle(fontSize: 16, color: Colors.blue),
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors
+                                    .blue), //прописываем отдельно, но в одной строке для того, чтобы поменять цвет второго предложения
                           )
                         ],
                       )
